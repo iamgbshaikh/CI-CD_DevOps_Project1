@@ -1,0 +1,8 @@
+<html>
+<title> TechTALK </title>
+<body>
+<h1> Hello Innova QE folks </h1>
+<h2> We team3 appriciate your effort to learn devops </h2>
+<h3> HAPPY LEARNING FOLKS..THANK YOU !!! </h3>
+</body>
+</html>
