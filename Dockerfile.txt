@@ -1,6 +1,19 @@
+# use a node base image
 FROM ubuntu
+
+#software to be installed 
 RUN apt-get update
 RUN apt-get -y install apache2
+
+#Binding to this location of host to container
 ADD . /var/www/html
 ENTRYPOINT apachectl -D FOREGROUND
+
+#set a health check
+HEALTHCHECK --interval=5s \
+            --timeout=5s \
+            CMD curl -f http://18.216.167.180:8000 || exit 1
+#tell docker what port to expose
+EXPOSE 8000
+
 ENV name INNOVA
